@@ -1,20 +1,16 @@
-.CardGroup {
-    margin-left:5%;
-    margin-right:5%;
-}
-
-.title {
-    text-align:center;
-}
-
-.text {
-    text-align:center;
-}
-
-.btn {
-    margin-left: 140px;
+.mc-wrapper {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0px 4rem;
+    margin-top: 2rem;
 }
 
 .Card {
-    grid-template-columns: "repeat(autp-fit,minmax(250px,1fr))",
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
