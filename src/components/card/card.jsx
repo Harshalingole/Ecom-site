@@ -10,7 +10,6 @@ import { selectImgState, setImgId } from "../../Redux/ModalSlice";
 
 export default function MediaCard({catName}) {
   const imgId = useSelector((state) => state.modal.value)
-  // console.log(imgId);
   const dispatch = useDispatch()
   const onImgClick = (e) => {
     console.log('ImgCLick');
