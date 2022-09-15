@@ -12,6 +12,7 @@ import Jacket from './category/jackets/jacket';
 import Shoe from './category/shoes/shoe';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartPage from './category/CartPage/CartPage';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/hat' element={<Hat />}/>
         <Route path='/jacket' element={<Jacket />}/>
         <Route path='/shoe' element={<Shoe />}/>
+        <Route path='/cartpage' element={<CartPage />} />
       </Routes>
       <Footer />
       

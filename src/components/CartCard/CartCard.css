@@ -1,0 +1,35 @@
+.cc-wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px gray;
+    height: 10rem;
+    padding: 1rem;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2rem;
+}
+.cc-img {
+    height: 10rem;
+}
+img {
+    max-height: 100%;
+}
+.cc-function {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.cp-summary {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+}

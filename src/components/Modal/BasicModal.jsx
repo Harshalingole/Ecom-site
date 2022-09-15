@@ -20,16 +20,16 @@ const style = {
 };
 
 export default function BasicModal({ catName }) {
-  console.log(catName);
+  // console.log(catName);
   const open = useSelector((state) => state.modal.open)
   const dispatch = useDispatch()
-  console.log(open);
+  // console.log(open);
   const imgId = useSelector((state) => state.modal.value)
-  console.log(Number(imgId));
+  // console.log(Number(imgId));
   const { id,Name, Price, path } = catName[imgId];
   return (
     <div>
-      {console.log(id)}
+      {/* {console.log(id)} */}
       <Modal
         open={open}
         onClose={() => dispatch(handleClose())}

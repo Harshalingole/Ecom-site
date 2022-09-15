@@ -7,17 +7,26 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { selectImgState, setImgId } from "../../Redux/ModalSlice";
+import { addToCart, selectCartArray } from "../../Redux/CartSlice";
 
 export default function MediaCard({catName}) {
   const imgId = useSelector((state) => state.modal.value)
+  const cartArr = useSelector((state) => state.cart.cartArray)
+  // console.log(cartArr);
+  // console.log(catName);
   const dispatch = useDispatch()
   const onImgClick = (e) => {
     console.log('ImgCLick');
     dispatch(setImgId(e.target.id))
   }
+  const onAddToCart = (e) => {
+    console.log('AddToCart Click');
+    const prdObj = catName[Number(e.target.id)]
+    dispatch(addToCart(prdObj))
+  }
   return (
     <>
-        {catName.map((id, Name, Price, path,) => {
+        {catName.map((id) => {
           return (
             <Card className="Card" sx={{ maxWidth: 345 }}>
               <CardMedia
@@ -36,7 +45,7 @@ export default function MediaCard({catName}) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button variant="outlined">Add To Cart</Button>
+                <Button variant="outlined" id={Number(id.id -1)} onClick={onAddToCart}>Add To Cart</Button>
               </CardActions>
             </Card>
           );

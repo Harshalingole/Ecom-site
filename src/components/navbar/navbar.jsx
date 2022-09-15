@@ -24,13 +24,13 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <Link to='/Hat'>Hats</Link>
+              <Link to="/Hat">Hats</Link>
             </li>
             <li>
-            <Link to='/jacket'>Jackets</Link>
+              <Link to="/jacket">Jackets</Link>
             </li>
             <li>
-            <Link to='/shoe'>Shoes</Link>
+              <Link to="/shoe">Shoes</Link>
             </li>
             <li>
               <a href="#">Tops</a>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <ul className="media">
             <li>
               <Link to="/signin" className="login">
-              SignIn
+                SignIn
               </Link>
             </li>
             <li>
@@ -51,11 +51,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href="#">
+              <Link to="/cartpage" className="cartpage">
                 <AiOutlineShoppingCart className="cart" />
-              </a>
+              </Link>
             </li>
-            
           </ul>
 
           {/* hamburget menu start  */}
@@ -66,7 +65,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    
     </>
   );
 };
