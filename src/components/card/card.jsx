@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { selectImgState, setImgId } from "../../Redux/ModalSlice";
-import { addToCart, selectCartArray } from "../../Redux/CartSlice";
+import { addPrice, addToCart, selectCartArray } from "../../Redux/CartSlice";
 
 export default function MediaCard({catName}) {
   const imgId = useSelector((state) => state.modal.value)
@@ -21,7 +21,8 @@ export default function MediaCard({catName}) {
   }
   const onAddToCart = (e) => {
     console.log('AddToCart Click');
-    const prdObj = catName[Number(e.target.id)]
+    const prdObj = catName[Number(e.target.id)];
+    // dispatch(addPrice(prdObj.Price))
     dispatch(addToCart(prdObj))
   }
   return (

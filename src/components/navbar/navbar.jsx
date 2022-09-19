@@ -5,8 +5,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartAry = useSelector((state) => state.cart.cartArray);
+  // console.log(cartAry);
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <>
@@ -53,6 +56,7 @@ const Navbar = () => {
             <li>
               <Link to="/cartpage" className="cartpage">
                 <AiOutlineShoppingCart className="cart" />
+                <span>{cartAry.length}</span>
               </Link>
             </li>
           </ul>

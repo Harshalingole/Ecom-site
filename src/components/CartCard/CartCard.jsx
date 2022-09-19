@@ -6,7 +6,7 @@ import { deleteCartItem } from "../../Redux/CartSlice";
 
 const CartCard = () => {
   const cartProductList = useSelector((state) => state.cart.cartArray);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   console.log(cartProductList);
   const onRemoveItem = (e) => {
     dispatch(deleteCartItem(e.target.id))
@@ -27,8 +27,8 @@ const CartCard = () => {
               Quantity <span>1</span>
             </h3>
             <div className="cc-function">
-              <Button variant="outlined">+</Button>
-              <Button variant="outlined">-</Button>
+              <Button variant="outlined" className="btn-fun">+</Button>
+              <Button variant="outlined" className="btn-fun">-</Button>
               <Button variant="contained" id={index} onClick={(e) => onRemoveItem(e)} >Remove</Button>
             </div>
           </div>
